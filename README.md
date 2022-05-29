@@ -1,27 +1,22 @@
-# YCloud
+После развертывания базы данных в Яндекс.Облаке с помощью terraform можно начать выполнять операции над ней. В проекте реализованы методы для чтения, записи, удаления и обновления данных. Для записи и чтения данных используется API совместимое с Amazon DynamoDB для документальных таблиц (https://cloud.yandex.ru/docs/ydb/operations/crud). Все методы представлены в src -> app -> crud.ts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+1. Метод для записи данных в базу. Необходимо передать в качестве аргумента -- объект Movie заданного интерфейса. 
+<img width="744" alt="image" src="https://user-images.githubusercontent.com/62829571/170873804-d58c75c8-66ae-4d1a-a0b4-deca833b7000.png">
 
-## Development server
+2. Метод для удаления из БД по id.
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/62829571/170873929-79271e68-9d2f-4c0a-9dbc-dbd06858eeb3.png">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+3. Обновление записи в БД по id. 
+<img width="758" alt="image" src="https://user-images.githubusercontent.com/62829571/170873950-7c2b49b9-ee13-41e6-b20e-a918ed284ea6.png">
 
-## Code scaffolding
+4. Чтение данных из таблицы по id.
+<img width="888" alt="image" src="https://user-images.githubusercontent.com/62829571/170873965-53686c98-e94e-4c87-84dc-23d79e9a873b.png">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+В качестве прослойки для выполненения всех запросов к базе данных выступает метод callWithToken, который добавляет в заголовок запроса iam токен,
+который надо сгенерировать для аккаунта
+<img width="942" alt="image" src="https://user-images.githubusercontent.com/62829571/170874023-74391914-8bf3-4030-a549-3c2dfd848fd4.png">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Пример записи данных через интерфейс:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img width="1114" alt="image" src="https://user-images.githubusercontent.com/62829571/170874074-f7aee761-5d27-4971-9f5f-f6b8fa4c68f4.png">

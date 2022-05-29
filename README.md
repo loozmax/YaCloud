@@ -20,3 +20,8 @@
 Пример записи данных через интерфейс:
 
 <img width="1114" alt="image" src="https://user-images.githubusercontent.com/62829571/170874074-f7aee761-5d27-4971-9f5f-f6b8fa4c68f4.png">
+
+Результат:
+
+<img width="573" alt="image" src="https://user-images.githubusercontent.com/62829571/170874184-c02d4641-7811-42dd-aaa9-3b70f73b5285.png">
+

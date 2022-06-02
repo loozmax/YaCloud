@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Movie } from './model';
 import { deleteMovieById, getMovieById, saveMovie, updateMovie } from './crud';
+import { Movie } from './model';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent {
         updateMovie: new FormControl(''),
         idMovie: new FormControl(''),
     });
-    
+
     public createMovie(title: string): void {
         const movie: Movie = {
             id: parseInt((Math.random() * (1000 - 1) + 1).toString()),

@@ -19,8 +19,9 @@
         Показать
       </button>
 
-      <div *ngIf="movieData">
-        {{movieData.title}}
+      <div style="font-size: 24px; margin-top: 20px;" *ngIf="movieData">
+        <div>id: {{movieData.id}}</div>
+        <div>title: {{movieData.title}}</div>
       </div>
 
       <h1>Обновить данные по фильму:</h1>

@@ -3,7 +3,7 @@ FROM node:latest AS build
 WORKDIR main
 COPY package.json package-lock.json ./
 RUN npm install
-COPY main ./
+COPY . .
 RUN npm run build
 
 #STAGE 2

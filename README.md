@@ -27,7 +27,3 @@
 <img width="573" alt="image" src="https://user-images.githubusercontent.com/62829571/170874184-c02d4641-7811-42dd-aaa9-3b70f73b5285.png">
 
 
-Dockefile находится в директории main
-docker build -t app .
-
-
